@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sort Visualization - Makers x Kate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+   
+    <link href="./Quicksort.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header">
+        <h1>
+            <span>Algorithm Visualizer</span>
+            Quick Sort
+        </h1>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="controls">
+            <div class="input-group">
+                <i class="fas fa-layer-group"></i>
+                <input type="number" id="boxCount" min="5" max="10" value="7">
+            </div>
+            
+            <button class="btn-gen" onclick="generateArray()">
+                <i class="fas fa-redo"></i> Reset
+            </button>
+            <button class="btn-start" onclick="startSort()" id="startBtn">
+                <i class="fas fa-play"></i> Run Sort
+            </button>
+            <button class="btn-stop" onclick="stopSort()" id="stopBtn" disabled>
+                <i class="fas fa-stop"></i> Stop
+            </button>
+        </div>
+
+        <div class="visual-area" id="container">
+            </div>
+
+        <div class="speed-control">
+            <span>SPEED</span>
+            <input type="range" id="speedRange" min="100" max="1500" value="800" oninput="updateSpeed()">
+            <span id="speedDisplay">Normal</span>
+        </div>
+
+        <div class="log-panel" id="logPanel">
+            <div class="log-entry">준비 완료. 'Reset'으로 배열 생성 후 'Run Sort'를 눌러주세요.</div>
+        </div>
+    </div>
+<script src="Quicksort.js"></script>
+</body>
+</html>
